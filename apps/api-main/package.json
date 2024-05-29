@@ -1,0 +1,28 @@
+{
+  "name": "social-api",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "db:push": "drizzle-kit push:sqlite",
+    "db:gen": "drizzle-kit generate:sqlite",
+    "db:introspect": "drizzle-kit introspect:turso",
+    "db:studio": "drizzle-kit studio --port 5000 --verbose"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.2.1",
+    "@libsql/client": "^0.6.0",
+    "bcryptjs": "^2.4.3",
+    "core-lib": "workspace:*",
+    "drizzle-orm": "^0.30.7",
+    "hono": "^4.2.2",
+    "jose": "^5.2.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14",
+    "typescript": "^4.7.4"
+  }
+}
