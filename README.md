@@ -1,4 +1,4 @@
-# movieQuest
+# (WIP) Movie Quest
 
 A platform for couch potatos to explore movies and TV shows, track progress and rank up.
 
