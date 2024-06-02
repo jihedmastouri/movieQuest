@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet } from 'react-native';
 
-export default function TabTwoScreen() {
+export default function Community() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>Tab One</Text>
       <View style={styles.separator} />
     </View>
   );
@@ -25,3 +25,4 @@ const styles = StyleSheet.create({
     width: '80%',
   },
 });
+

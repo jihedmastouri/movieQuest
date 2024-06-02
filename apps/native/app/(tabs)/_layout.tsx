@@ -3,7 +3,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 
 import Colors from '@/constants/Colors';
-import { useColorScheme } from 'react-native';
+import { View, useColorScheme, Text} from 'react-native';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -13,6 +13,34 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
+function Header(){
+return (
+    <View style={{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: 80,
+      width: "100%",
+      padding: 10
+    }}
+    >
+      <Text> <FontAwesome size={28} name='user' /> </Text>
+      <Text> <FontAwesome size={28} name='bell' /> </Text>
+    </View>
+  )
+}
+
+// TODO: Check if this any good else remove it from below
+function TabBarBg(){
+  return (
+    <View style={{
+    backgroundColor: 'white',
+    }}>
+
+    </View>
+  )
+}
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -20,6 +48,20 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        header: Header,
+        tabBarBackground:TabBarBg,
+        tabBarItemStyle: {
+          padding: 10,
+          height: 60,
+          marginVertical: 10
+        },
+        tabBarStyle : {
+          width: "90%",
+          height: 80,
+          marginHorizontal: "5%",
+          marginBottom: 10,
+          borderRadius: 10,
+        }
       }}
       initialRouteName='home'
     >
@@ -45,14 +87,14 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="ai"
+        name="search"
         options={{
           title: 'Find',
           tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="community"
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,

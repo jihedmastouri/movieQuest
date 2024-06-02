@@ -1,24 +1,28 @@
 # movieQuest
 
-A platform for couch potatos to find and organize movies and TV shows.
+A platform for couch potatos to explore movies and TV shows, track progress and rank up.
 
-Designed By: []()
+Designed By: [Othmen Maneri](https://www.behance.net/othmenmaneri)
 
-## Apps and Packages
+## The Tech
 
 This is a mono-repo that uses `Turbo` and `pnpm`.
+
+### Apps:
 
 - `native`: [React Native](https://reactnative.dev/) app built with [Expo](https://docs.expo.dev/)
 - `web`: [Remix](https://remix.run) app built with [react-native-web](https://necolas.github.io/react-native-web/)
 - `api-main`: built with [Hono](https://nextjs.org/), SQLite (libSQL [Truso](https://turso.tech)) and [Drizzle](https://www.prisma.io/) ORM.
 - `api-media`: built with [Fastify](https://fastify.dev/) and MongoDB (using Mongoose).
 
+### Packages:
+
 - `core-lib`: a shared package for type definitions and validations.
 - `core-app`: a shared package for business logic and UI components.
 
 ## License
 
-movieQuest
+Movie Quest - A gamified platform to explore movies and TV shows, and track progress.
 
 Copyright (C) 2024 Jihed Mastouri & contributors.
 
